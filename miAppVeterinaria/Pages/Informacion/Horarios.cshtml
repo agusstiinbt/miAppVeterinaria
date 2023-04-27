@@ -1,0 +1,154 @@
+﻿@page
+@using Microsoft.AspNetCore.Html;
+@using miAppVeterinaria.Model;
+@*@inject miAppVeterinaria.Servicios.IveterinarioService vet;*@
+@model miAppVeterinaria.Pages.Informacion.HorariosModel
+@{
+    string boolToString(bool a)
+    {
+        if (a)
+        {
+            return "✓";
+        }
+        else return "";
+    }
+}
+<style type="text/css">
+    .tg {
+        border-collapse: collapse;
+        border-color: #9ABAD9;
+        border-spacing: 0;
+    }
+
+        .tg td {
+            background-color: #EBF5FF;
+            border-color: #9ABAD9;
+            border-style: solid;
+            border-width: 1px;
+            color: #444;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg th {
+            background-color: #409cff;
+            border-color: #9ABAD9;
+            border-style: solid;
+            border-width: 1px;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tg .tg-9wq8 {
+            border-color: inherit;
+            text-align: center;
+            vertical-align: middle
+        }
+
+        .tg .tg-c3ow {
+            border-color: inherit;
+            text-align: center;
+            vertical-align: top
+        }
+
+        .tg .tg-0pky {
+            border-color: inherit;
+            text-align: left;
+            vertical-align: top
+        }
+</style>
+<body>
+    <h1>Sección de Horarios</h1>
+    <h2>Veterinarios</h2>
+    <div>
+
+        <table class="tg">
+
+            <thead>
+
+                <tr>
+                    <th class="tg-c3ow"></th>
+                    <th class="tg-9wq8" colspan="8">dias laborales</th>
+                </tr>
+
+                <tr>
+                    <td class="tg-c3ow"><a asp-page="/Veterinarios/Listado">Veterinarios</a></td>
+                    <td class="tg-0pky">lunes</td>
+                    <td class="tg-0pky">martes</td>
+                    <td class="tg-0pky">miercoles</td>
+                    <td class="tg-0pky">jueves</td>
+                    <td class="tg-0pky">viernes</td>
+                    <td class="tg-0pky">sabado</td>
+                    <td class="tg-0pky">Domingo</td>
+                </tr>
+            </thead>
+            
+            <tbody>
+                @foreach (var dia in Model.listaDiasLaboralesVet)
+                {
+                    <tr>
+                        <td>@dia.Id</td>
+                        <td>@boolToString(@dia.Lunes)</td>
+                        <td>@boolToString(@dia.Martes)</td>
+                        <td>@boolToString(@dia.Miercoles)</td>
+                        <td>@boolToString(@dia.Jueves)</td>
+                        <td>@boolToString(@dia.Viernes)</td>
+                        <td>@boolToString(@dia.Sabado)</td>
+                        <td>@boolToString(@dia.Domingo)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Secretarias</h2>
+    <div>
+
+        <table class="tg">
+
+            <thead>
+
+                <tr>
+                    <th class="tg-c3ow"></th>
+                    <th class="tg-9wq8" colspan="8">Días Laborales</th>
+                </tr>
+
+                <tr>
+                    <td class="tg-c3ow"><a asp-page="/Secretarias/Listado">Secretarias</a></td>
+                    <td class="tg-0pky">lunes</td>
+                    <td class="tg-0pky">martes</td>
+                    <td class="tg-0pky">miercoles</td>
+                    <td class="tg-0pky">jueves</td>
+                    <td class="tg-0pky">viernes</td>
+                    <td class="tg-0pky">sabado</td>
+                    <td class="tg-0pky">Domingo</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var dia in Model.listaDiasLaboralesSec)
+                {
+                    <tr>
+                        <td>@dia.Id</td>
+                        <td>@boolToString(@dia.Lunes)</td>
+                        <td>@boolToString(@dia.Martes)</td>
+                        <td>@boolToString(@dia.Miercoles)</td>
+                        <td>@boolToString(@dia.Jueves)</td>
+                        <td>@boolToString(@dia.Viernes)</td>
+                        <td>@boolToString(@dia.Sabado)</td>
+                        <td>@boolToString(@dia.Domingo)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>

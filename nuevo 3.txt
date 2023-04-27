@@ -1,0 +1,294 @@
+USE [master]
+GO
+/****** Object:  Database [BDVeterinaria]    Script Date: 27/4/2023 14:01:18 ******/
+CREATE DATABASE [BDVeterinaria]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'BDVeterinaria', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\BDVeterinaria.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'BDVeterinaria_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\BDVeterinaria_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [BDVeterinaria] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [BDVeterinaria].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [BDVeterinaria] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [BDVeterinaria] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [BDVeterinaria] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [BDVeterinaria] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [BDVeterinaria] SET READ_COMMITTED_SNAPSHOT ON 
+GO
+ALTER DATABASE [BDVeterinaria] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET RECOVERY FULL 
+GO
+ALTER DATABASE [BDVeterinaria] SET  MULTI_USER 
+GO
+ALTER DATABASE [BDVeterinaria] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [BDVeterinaria] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [BDVeterinaria] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [BDVeterinaria] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [BDVeterinaria] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [BDVeterinaria] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'BDVeterinaria', N'ON'
+GO
+ALTER DATABASE [BDVeterinaria] SET QUERY_STORE = OFF
+GO
+USE [BDVeterinaria]
+GO
+/****** Object:  UserDefinedFunction [dbo].[NumberOfRows]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE FUNCTION [dbo].[NumberOfRows]()
+RETURNS integer
+as
+BEGIN
+  RETURN (SELECT count(Id)
+                 FROM diaslaboralessec);
+END;
+GO
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__EFMigrationsHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[consultorios]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[consultorios](
+	[IdConsultorio] [int] NOT NULL,
+	[Direccion] [nvarchar](max) NOT NULL,
+	[Barrio] [varchar](20) NOT NULL,
+ CONSTRAINT [PK_consultorios] PRIMARY KEY CLUSTERED 
+(
+	[IdConsultorio] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[diasLaboralesSec]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[diasLaboralesSec](
+	[Id] [int] NOT NULL,
+	[Lunes] [bit] NOT NULL,
+	[Martes] [bit] NOT NULL,
+	[Miercoles] [bit] NOT NULL,
+	[Jueves] [bit] NOT NULL,
+	[Viernes] [bit] NOT NULL,
+	[Sabado] [bit] NOT NULL,
+	[Domingo] [bit] NOT NULL,
+ CONSTRAINT [PK_diasLaboralesSec] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[diasLaboralesVet]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[diasLaboralesVet](
+	[Id] [int] NOT NULL,
+	[Lunes] [bit] NOT NULL,
+	[Martes] [bit] NOT NULL,
+	[Miercoles] [bit] NOT NULL,
+	[Jueves] [bit] NOT NULL,
+	[Viernes] [bit] NOT NULL,
+	[Sabado] [bit] NOT NULL,
+	[Domingo] [bit] NOT NULL,
+ CONSTRAINT [PK_diaslaborales] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[secretarias]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[secretarias](
+	[IdSecretaria] [int] NOT NULL,
+	[Nombre] [nvarchar](max) NOT NULL,
+	[Apellido] [nvarchar](max) NOT NULL,
+	[Consultorio] [int] NOT NULL,
+ CONSTRAINT [PK_secretarias] PRIMARY KEY CLUSTERED 
+(
+	[IdSecretaria] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[secretariaVeterinarios]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[secretariaVeterinarios](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[VeterinarioId] [int] NOT NULL,
+	[SecretariaId] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [UC_secVec] UNIQUE NONCLUSTERED 
+(
+	[VeterinarioId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[veterinarios]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[veterinarios](
+	[IdVeterinario] [int] NOT NULL,
+	[Nombre] [nvarchar](max) NOT NULL,
+	[Apellido] [nvarchar](max) NOT NULL,
+	[consultorio] [int] NOT NULL,
+ CONSTRAINT [PK_veterinarios] PRIMARY KEY CLUSTERED 
+(
+	[IdVeterinario] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[diasLaboralesSec]  WITH CHECK ADD FOREIGN KEY([Id])
+REFERENCES [dbo].[secretarias] ([IdSecretaria])
+GO
+ALTER TABLE [dbo].[diasLaboralesVet]  WITH CHECK ADD FOREIGN KEY([Id])
+REFERENCES [dbo].[veterinarios] ([IdVeterinario])
+GO
+ALTER TABLE [dbo].[secretarias]  WITH CHECK ADD  CONSTRAINT [FK__secretari__Consu__5535A963] FOREIGN KEY([Consultorio])
+REFERENCES [dbo].[consultorios] ([IdConsultorio])
+GO
+ALTER TABLE [dbo].[secretarias] CHECK CONSTRAINT [FK__secretari__Consu__5535A963]
+GO
+ALTER TABLE [dbo].[secretariaVeterinarios]  WITH CHECK ADD FOREIGN KEY([SecretariaId])
+REFERENCES [dbo].[secretarias] ([IdSecretaria])
+GO
+ALTER TABLE [dbo].[secretariaVeterinarios]  WITH CHECK ADD FOREIGN KEY([VeterinarioId])
+REFERENCES [dbo].[veterinarios] ([IdVeterinario])
+GO
+ALTER TABLE [dbo].[veterinarios]  WITH CHECK ADD  CONSTRAINT [FK__veterinar__consu__52593CB8] FOREIGN KEY([consultorio])
+REFERENCES [dbo].[consultorios] ([IdConsultorio])
+GO
+ALTER TABLE [dbo].[veterinarios] CHECK CONSTRAINT [FK__veterinar__consu__52593CB8]
+GO
+/****** Object:  StoredProcedure [dbo].[GetSecretariasNombre]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GetSecretariasNombre]
+            @FirstName varchar(50)
+        AS
+        BEGIN
+            SET NOCOUNT ON;
+            select * from secretarias where Nombre like @FirstName +'%'
+        END
+GO
+/****** Object:  StoredProcedure [dbo].[GetVeterinariasNombre]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GetVeterinariasNombre]
+            @FirstName varchar(50)
+        AS
+        BEGIN
+            SET NOCOUNT ON;
+            select * from secretarias where Nombre like @FirstName +'%'
+        END
+GO
+/****** Object:  StoredProcedure [dbo].[GetVeterinarios]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GetVeterinarios]
+       AS
+        BEGIN
+            SET NOCOUNT ON;
+            select * from veterinarios
+        END
+GO
+/****** Object:  StoredProcedure [dbo].[GetVeterinariosNombre]    Script Date: 27/4/2023 14:01:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[GetVeterinariosNombre]
+            @FirstName varchar(50)
+        AS
+        BEGIN
+            SET NOCOUNT ON;
+            select * from veterinarios where Nombre like @FirstName +'%'
+        END
+GO
+USE [master]
+GO
+ALTER DATABASE [BDVeterinaria] SET  READ_WRITE 
+GO

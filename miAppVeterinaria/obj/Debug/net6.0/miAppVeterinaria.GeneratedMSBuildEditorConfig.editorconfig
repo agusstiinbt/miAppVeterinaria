@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = miAppVeterinaria
+build_property.RootNamespace = miAppVeterinaria
+build_property.ProjectDir = C:\Users\Intel\Desktop\PROGRAMACION\NO ISTEA\VisualStudio2022\miAppVeterinaria\miAppVeterinaria\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Intel\Desktop\PROGRAMACION\NO ISTEA\VisualStudio2022\miAppVeterinaria\miAppVeterinaria
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Consultorios/Borrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdG9yaW9zXEJvcnJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Consultorios/Listado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdG9yaW9zXExpc3RhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Informacion/Contacto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYWNpb25cQ29udGFjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Informacion/Horarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYWNpb25cSG9yYXJpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Informacion/Nosotros.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5mb3JtYWNpb25cTm9zb3Ryb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Maps/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Secretarias/Borrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VjcmV0YXJpYXNcQm9ycmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Secretarias/Listado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VjcmV0YXJpYXNcTGlzdGFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Secretarias/Modificar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VjcmV0YXJpYXNcTW9kaWZpY2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Veterinarios/Borrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9zXEJvcnJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Veterinarios/Listado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9zXExpc3RhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/Veterinarios/Modificar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9zXE1vZGlmaWNhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Intel/Desktop/PROGRAMACION/NO ISTEA/VisualStudio2022/miAppVeterinaria/miAppVeterinaria/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
